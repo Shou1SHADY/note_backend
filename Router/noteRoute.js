@@ -10,7 +10,7 @@ router.use((req, res, next) => {
 router.get('/notes', noteCtrl.getAllNotes)
 router.post('/notes/save', noteCtrl.saveNote)
 router.put('/notes/update', noteCtrl.updateNote)
-router.delete('/notes/delete', noteCtrl.deleteNote)
+router.delete('/notes/delete/:noteId', noteCtrl.deleteNote)
 // define the about route
 router.get('/about', (req, res) => {
     res.send('About birds')
